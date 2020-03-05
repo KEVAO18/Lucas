@@ -106,5 +106,56 @@
     </div>";
   }
 
+  function targeta3($materia=''){
+    echo "
+    <div class='col-md-6 col-sm-6 mt-5'>
+      <div class='card'>
+        <img src='assets/multimedia/".$materia.".jpg' class='img-card' alt='img-targeta'>
+        <div class='card-body'>
+          <h4 class='card-title' ><a href='".$materia.".php' title=''>".$materia."</a></h4>
+        </div>
+      </div>
+    </div>";
+  }
+
+  function Horario(){
+    $day = date('D');
+    if($day == "Mon"){
+      targeta("Matematicas");
+      targeta("Matematicas");
+      targeta("Español");
+      targeta("Ingles");
+      targeta("Sociales");
+      targeta("Sociales");
+    }elseif ($day == "Tue") {
+      targeta("Religion");
+      targeta("Español");
+      targeta("EducacionF");
+      targeta("Emprendimiento");
+      targeta("Religion");
+      targeta("Ingles");
+    }elseif ($day == "Wed") {
+      targeta("Ingles");
+      targeta("Ciencias");
+      targeta("Español");
+      targeta("Sociales");
+      targeta("Tecnologia");
+      targeta("Tecnologia");
+    }elseif ($day == "Thu") {
+      targeta("Artes");
+      targeta("Artes");
+      targeta("Español");
+      targeta("Sociales");
+      targeta("Rotacion");
+      targeta("Rotacion");
+    }elseif ($day == "Fri") {
+      targeta("Geometria");
+      targeta("Estadistica");
+      targeta("Ciencias");
+      targeta("Ciencias");
+      targeta("EducacionF");
+      targeta("Etica");
+    }
+  }
 
 ?>

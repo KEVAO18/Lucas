@@ -45,7 +45,6 @@
 		targeta("Sociales");
 		targeta("Tecnologia");
 		?>
-		<a href='' title=''></a>
 	</div>
 </div>
 <?php
