@@ -9,6 +9,7 @@
               <li class='nav-item'>
                 <a class='nav-link' href='index.php'>Lucas Orrego Martínez - ".$lugar."</a>
               </li>
+              <li class='nav-item' style='color: #ffffff'><a href='' class='nav-link' title=''><i class='fas fa-cloud-upload-alt'></i></a></li>
             </ul>
             <ul class='navbar-nav'>
               <li class='nav-item' style='color: #ffffff'>".date('Y-m-d')."</li>
@@ -95,24 +96,14 @@
     </div>";
   }
 
-  function targeta2(){
-    echo "
-    <div class='col-md-6'>
-      <div class='card'>
-        <div class='card-body'>
-          <h4><a href='".$materia.".php' title=''>".$materia."</a></h4>
-        </div>
-      </div>
-    </div>";
-  }
-
-  function targeta3($materia=''){
+  function targeta2($periodo=''){
     echo "
     <div class='col-md-6 col-sm-6 mt-5'>
       <div class='card'>
-        <img src='assets/multimedia/".$materia.".jpg' class='img-card' alt='img-targeta'>
+        <img src='assets/multimedia/periodo".$periodo.".jpg' class='img-card' alt='img-targeta'>
         <div class='card-body'>
-          <h4 class='card-title' ><a href='".$materia.".php' title=''>".$materia."</a></h4>
+          <hr>
+          <h4 class='card-title' ><a href='periodo".$periodo.".php' title='' style='color: #154521'>Periodo ".$periodo."</a></h4>
         </div>
       </div>
     </div>";

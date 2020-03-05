@@ -47,7 +47,6 @@
     <br>
     <?php
     	footer();
-
     ?>
 	<script src="assets/js"></script>
 	<!-- JQuery -->
