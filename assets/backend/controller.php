@@ -9,7 +9,7 @@
               <li class='nav-item'>
                 <a class='nav-link' href='index.php'>Lucas Orrego Martínez - ".$lugar."</a>
               </li>
-              <li class='nav-item' style='color: #ffffff'><a href='' class='nav-link' title=''><i class='fas fa-cloud-upload-alt'></i></a></li>
+              <li class='nav-item' style='color: #ffffff'><a href='' class='nav-link' title='' data-toggle='modal' data-target='#upload'><i class='fas fa-cloud-upload-alt'></i></a></li>
             </ul>
             <ul class='navbar-nav'>
               <li class='nav-item' style='color: #ffffff'>".date('Y-m-d')."</li>
@@ -48,6 +48,72 @@
                           <li class='list-group-item menu'><a href='Sociales.php' style='color: #444444cc'>Sociales</a>
                           <li class='list-group-item menu'><a href='Tecnologia.php' style='color: #444444cc'>Tecnologia</a></li>
                           </li>
+                        <center>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /modal -->
+        <!-- Modal -->
+        <div class='modal right fade' id='upload' tabindex='2' role='dialog' aria-labelledby='upload'
+          aria-hidden='true'>
+          <div class='modal-dialog modal-full-height modal-right' role='document'>
+            <div class='modal-content'>
+              <div class='modal-header bg-primary' style=''>
+                <h4 style='color: #eeeeee' class='modal-title' id='upload'>Subir Archivo</h4>
+              </div>
+              <div class='modal-body'>
+                <div class='container'>
+                  <div class='card' style='box-shadow: 0 0 0 #fff;'>
+                    <ul class='list-group list-group-flush'>
+                      <li class='list-group-item'>
+                        <center>
+                          <form action='' method='post' enctype='multipart/form-data'>
+                            <div class='md-form mt-3'>
+                              <input type='text' id='name' class='form-control' name='name' value=''>
+                              <label for='name'>Nombre</label>
+                            </div>
+                            <div class='custom-control custom-switch'>
+                              <input type='checkbox' class='custom-control-input' name='rv' id='rv'>
+                              <label class='custom-control-label' for='rv'>Revisado</label>
+                            </div>
+                            <br>
+                            <h4>Tipo de archivo</h4>
+                            <div class=''>
+                              <div class='custom-control custom-radio'>
+                                <input type='radio' class='custom-control-input' value='ritual' id='uno' name='tipo'>
+                                <label class='custom-control-label' for='uno'>Word</label>
+                              </div>
+
+                              <div class='custom-control custom-radio'>
+                                <input type='radio' class='custom-control-input' value='baño' id='dos' name='tipo'>
+                                <label class='custom-control-label' for='dos'>PowerPoint</label>
+                              </div>
+
+                              <div class='custom-control custom-radio'>
+                                <input type='radio' class='custom-control-input' value='armonizador' id='tres' name='tipo'>
+                                <label class='custom-control-label' for='tres'>excel</label>
+                              </div>
+
+                              <div class='custom-control custom-radio'>
+                                <input type='radio' class='custom-control-input' value='armonizador' id='tres' name='tipo'>
+                                <label class='custom-control-label' for='tres'>imagen</label>
+                              </div>
+                            </div>
+                            <br>
+                            <div class='custom-file'>
+                              <input type='file' name='foto' class='custom-file-input' id='inputGroupFile01' aria-describedby='imagen'>
+                              <label class='custom-file-label' for='inputGroupFile01'>Elige la foto</label>
+                            </div>
+                            <div class='text-center my-3'>
+                              <button type='submit' name='send' class='btn btn-indigo btn-block'>Enviar</button>
+                            </div>
+                            </div>
+                          </form>
                         <center>
                       </li>
                     </ul>
