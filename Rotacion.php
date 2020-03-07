@@ -26,46 +26,16 @@
        navbar("Rotacion");
 
     ?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="container">
+  <div class="row mt-5 py-5">
+    <?php
+    targeta2("1", "Rotacion");
+    targeta2("2", "Rotacion");
+    targeta2("3", "Rotacion");
+    targeta2("4", "Rotacion");
+    ?>
+  </div>
+</div>
     <?php
 
         footer();

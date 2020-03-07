@@ -26,46 +26,16 @@
        navbar("Sociales");
 
     ?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="container">
+  <div class="row mt-5 py-5">
+    <?php
+    targeta2("1", "Sociales");
+    targeta2("2", "Sociales");
+    targeta2("3", "Sociales");
+    targeta2("4", "Sociales");
+    ?>
+  </div>
+</div>
     <?php
 
         footer();

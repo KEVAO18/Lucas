@@ -26,46 +26,16 @@
        navbar("Estadistica");
 
     ?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="container">
+  <div class="row mt-5 py-5">
+    <?php
+    targeta2("1", "Estadistica");
+    targeta2("2", "Estadistica");
+    targeta2("3", "Estadistica");
+    targeta2("4", "Estadistica");
+    ?>
+  </div>
+</div>
     <?php
 
         footer();

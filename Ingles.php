@@ -26,46 +26,16 @@
        navbar("Ingles");
 
     ?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="container">
+  <div class="row mt-5 py-5">
+    <?php
+    targeta2("1", "Ingles");
+    targeta2("2", "Ingles");
+    targeta2("3", "Ingles");
+    targeta2("4", "Ingles");
+    ?>
+  </div>
+</div>
     <?php
 
         footer();

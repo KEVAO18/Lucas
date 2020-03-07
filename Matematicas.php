@@ -26,46 +26,16 @@
        navbar("Matematicas");
 
     ?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="container">
+  <div class="row mt-5 py-5">
+    <?php
+    targeta2("1", "Matematicas");
+    targeta2("2", "Matematicas");
+    targeta2("3", "Matematicas");
+    targeta2("4", "Matematicas");
+    ?>
+  </div>
+</div>
     <?php
 
         footer();

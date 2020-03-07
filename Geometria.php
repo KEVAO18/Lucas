@@ -26,46 +26,16 @@
        navbar("Geometria");
 
     ?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="container">
+  <div class="row mt-5 py-5">
+    <?php
+    targeta2("1", "Geometria");
+    targeta2("2", "Geometria");
+    targeta2("3", "Geometria");
+    targeta2("4", "Geometria");
+    ?>
+  </div>
+</div>
     <?php
 
         footer();

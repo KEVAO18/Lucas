@@ -32,7 +32,7 @@
 	  </header>
 
 	  <div class="container text-center py-4">
-	  	<h2>Lucas Orrego Martínez</h2>
+	  	<h2>Horario</h2>
 	  </div>
     <div class="container">
       <div class="row">

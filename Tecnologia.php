@@ -30,10 +30,10 @@
 <div class="container">
   <div class="row mt-5 py-5">
     <?php
-    targeta2("1");
-    targeta2("2");
-    targeta2("3");
-    targeta2("4");
+    targeta2("1", "Tecnologia");
+    targeta2("2", "Tecnologia");
+    targeta2("3", "Tecnologia");
+    targeta2("4", "Tecnologia");
     ?>
   </div>
 </div>

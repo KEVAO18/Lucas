@@ -26,46 +26,16 @@
        navbar("EdicacionF");
 
     ?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="container">
+  <div class="row mt-5 py-5">
+    <?php
+    targeta2("1", "EducacionF");
+    targeta2("2", "EducacionF");
+    targeta2("3", "EducacionF");
+    targeta2("4", "EducacionF");
+    ?>
+  </div>
+</div>
     <?php
 
         footer();

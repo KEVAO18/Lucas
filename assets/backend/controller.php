@@ -1,5 +1,4 @@
 <?php
-
 	function navbar($lugar=''){
 		echo "<!-- Navbar -->
       <div class='navbar navbar-expand-md navbar-dark fixed-top azul scrolling-navbar'>
@@ -72,42 +71,92 @@
                     <ul class='list-group list-group-flush'>
                       <li class='list-group-item'>
                         <center>
-                          <form action='' method='post' enctype='multipart/form-data'>
+                          <form action='assets/backend/conexion.php?op=1' method='post' enctype='multipart/form-data'>
+                            <h4>Revisado</h4>
+                            <div class=''>
+                              <div class='custom-control custom-radio'>
+                                <input type='radio' class='custom-control-input' value='1' id='si' name='rv'>
+                                <label class='custom-control-label' for='si'>Si</label>
+                              </div>
+
+                              <div class='custom-control custom-radio'>
+                                <input type='radio' class='custom-control-input' value='0' id='no' name='rv'>
+                                <label class='custom-control-label' for='no'>No</label>
+                              </div>
+                            </div>
+                            <br>
                             <div class='md-form mt-3'>
-                              <input type='text' id='name' class='form-control' name='name' value=''>
-                              <label for='name'>Nombre</label>
+                              <input type='number' id='nota' class='form-control' name='nota' value='0'>
+                              <label for='nota'>Nota</label>
                             </div>
-                            <div class='custom-control custom-switch'>
-                              <input type='checkbox' class='custom-control-input' name='rv' id='rv'>
-                              <label class='custom-control-label' for='rv'>Revisado</label>
+                            <select class='browser-default custom-select' name='materia'>
+                              <option selected value='---'>Materia</option>
+                              <option value='Artes'>Artes</option>
+                              <option value='Ciencias'>Ciencias</option>
+                              <option value='EducacionF'>EducacionF</option>
+                              <option value='Emprendimiento'>Emprendimiento</option>
+                              <option value='Español'>Español</option>
+                              <option value='Estadistica'>Estadistica</option>
+                              <option value='Etica'>Etica</option>
+                              <option value='Geometria'>Geometria</option>
+                              <option value='Ingles'>Ingles</option>
+                              <option value='Matematicas'>Matematicas</option>
+                              <option value='Religion'>Religion</option>
+                              <option value='Rotacion'>Rotacion</option>
+                              <option value='Sociales'>Sociales</option>
+                              <option value='Tecnologia'>Tecnologia</option>
+                            </select>
+                            <br>
+                            <br>
+                            <h4>Periodo</h4>
+                            <div class=''>
+                              <div class='custom-control custom-radio'>
+                                <input type='radio' class='custom-control-input' value='1' id='p1' name='per'>
+                                <label class='custom-control-label' for='p1'>Periodo 1</label>
+                              </div>
+
+                              <div class='custom-control custom-radio'>
+                                <input type='radio' class='custom-control-input' value='2' id='p2' name='per'>
+                                <label class='custom-control-label' for='p2'>Periodo 2</label>
+                              </div>
+
+                              <div class='custom-control custom-radio'>
+                                <input type='radio' class='custom-control-input' value='3' id='p3' name='per'>
+                                <label class='custom-control-label' for='p3'>Periodo 3</label>
+                              </div>
+                              <div class='custom-control custom-radio'>
+                                <input type='radio' class='custom-control-input' value='4' id='p4' name='per'>
+                                <label class='custom-control-label' for='p4'>Periodo 4</label>
+                              </div>
                             </div>
+                            <br>
                             <br>
                             <h4>Tipo de archivo</h4>
                             <div class=''>
                               <div class='custom-control custom-radio'>
-                                <input type='radio' class='custom-control-input' value='ritual' id='uno' name='tipo'>
+                                <input type='radio' class='custom-control-input' value='word' id='uno' name='tipo'>
                                 <label class='custom-control-label' for='uno'>Word</label>
                               </div>
 
                               <div class='custom-control custom-radio'>
-                                <input type='radio' class='custom-control-input' value='baño' id='dos' name='tipo'>
+                                <input type='radio' class='custom-control-input' value='powerpoint' id='dos' name='tipo'>
                                 <label class='custom-control-label' for='dos'>PowerPoint</label>
                               </div>
 
                               <div class='custom-control custom-radio'>
-                                <input type='radio' class='custom-control-input' value='armonizador' id='tres' name='tipo'>
+                                <input type='radio' class='custom-control-input' value='excel' id='tres' name='tipo'>
                                 <label class='custom-control-label' for='tres'>excel</label>
                               </div>
 
                               <div class='custom-control custom-radio'>
-                                <input type='radio' class='custom-control-input' value='armonizador' id='tres' name='tipo'>
-                                <label class='custom-control-label' for='tres'>imagen</label>
+                                <input type='radio' class='custom-control-input' value='imagen' id='cuatro' name='tipo'>
+                                <label class='custom-control-label' for='cuatro'>imagen</label>
                               </div>
                             </div>
                             <br>
                             <div class='custom-file'>
-                              <input type='file' name='foto' class='custom-file-input' id='inputGroupFile01' aria-describedby='imagen'>
-                              <label class='custom-file-label' for='inputGroupFile01'>Elige la foto</label>
+                              <input type='file' name='archivo' class='custom-file-input' id='inputGroupFile01' aria-describedby='imagen'>
+                              <label class='custom-file-label' for='inputGroupFile01'>Elige el archivo</label>
                             </div>
                             <div class='text-center my-3'>
                               <button type='submit' name='send' class='btn btn-indigo btn-block'>Enviar</button>
@@ -162,17 +211,49 @@
     </div>";
   }
 
-  function targeta2($periodo=''){
+  function targeta2($periodo='', $materia=''){
     echo "
     <div class='col-md-6 col-sm-6 mt-5'>
       <div class='card'>
-        <img src='assets/multimedia/periodo".$periodo.".jpg' class='img-card' alt='img-targeta'>
+        <img src='assets/multimedia/periodo".$periodo."_".$materia.".jpg' class='img-card' alt='img-targeta'>
         <div class='card-body'>
           <hr>
-          <h4 class='card-title' ><a href='periodo".$periodo.".php' title='' style='color: #154521'>Periodo ".$periodo."</a></h4>
+          <h4 class='card-title' ><a href='periodo".$periodo.".php?mt=".$materia."' title='' style='color: #154521'>Periodo ".$periodo."</a></h4>
         </div>
       </div>
     </div>";
+  }
+
+  function tareas($materia='', $periodo=0){
+    $host="localhost";
+    $user="root";
+    $pass="";
+    $db="lucasinem";
+    $conexion = new mysqli($host, $user, $pass, $db) or die('muerto');
+    $query="SELECT * FROM `registros` WHERE `materia` = '$materia' AND `periodo` = '$periodo'";
+    $targeta = $conexion->query($query);
+    while ($row=$targeta->fetch_assoc()){
+      if ($row['estatus']==0) {
+        $estado="No Revisado";
+        $nota = "";
+      }else if ($row['estatus']>=1) {
+        $estado="Revisado";
+        $nota = "<h5>Nota: ".$row['nota']."</h5>";
+      }
+    echo "
+    <div class='col-md-6 col-sm-6 mt-5'>
+      <div class='card'>
+        <img src='assets/multimedia/".$row['tipo'].".jpg' class='img-card' alt='img-targeta'>
+        <div class='card-body'>
+          <hr>
+          <h4 class='card-title' ><a href='assets/tareas/".$row['name']."' title='' style='color: #154521'>".$row['name']."</a></h4>
+          <h5>Estado: ".$row['fecha']."</h5>
+          <h5>Estado: ".$estado."</h5>
+          ".$nota."
+        </div>
+      </div>
+    </div>";
+    }
   }
 
   function Horario(){
@@ -180,38 +261,45 @@
     if($day == "Mon"){
       targeta("Matematicas");
       targeta("Matematicas");
-      targeta("Español");
       targeta("Ingles");
-      targeta("Sociales");
-      targeta("Sociales");
+      targeta("Etica");
+      targeta("Religion");
+      targeta("Español");
     }elseif ($day == "Tue") {
-      targeta("Religion");
-      targeta("Español");
-      targeta("EducacionF");
-      targeta("Emprendimiento");
-      targeta("Religion");
-      targeta("Ingles");
-    }elseif ($day == "Wed") {
-      targeta("Ingles");
-      targeta("Ciencias");
-      targeta("Español");
-      targeta("Sociales");
-      targeta("Tecnologia");
-      targeta("Tecnologia");
-    }elseif ($day == "Thu") {
-      targeta("Artes");
-      targeta("Artes");
-      targeta("Español");
-      targeta("Sociales");
-      targeta("Rotacion");
-      targeta("Rotacion");
-    }elseif ($day == "Fri") {
       targeta("Geometria");
       targeta("Estadistica");
-      targeta("Ciencias");
-      targeta("Ciencias");
       targeta("EducacionF");
-      targeta("Etica");
+      targeta("Sociales");
+      targeta("Español");
+      targeta("Ingles");
+    }elseif ($day == "Wed") {
+      targeta("Ciencias");
+      targeta("Emprendimiento");
+      targeta("Tecnologia");
+      targeta("Tecnologia");
+      targeta("Español");
+      targeta("Sociales");
+    }elseif ($day == "Thu") {
+      targeta("Ciencias");
+      targeta("Ciencias");
+      targeta("Artes");
+      targeta("Artes");
+      targeta("Sociales");
+      targeta("Ingles");
+    }elseif ($day == "Fri") {
+      targeta("Rotacion");
+      targeta("Rotacion");
+      targeta("EducacionF");
+      targeta("Español");
+      targeta("Sociales");
+      targeta("Religion");
+    }else{
+      targeta("Descanso");
+      targeta("Descanso");
+      targeta("Descanso");
+      targeta("Descanso");
+      targeta("Descanso");
+      targeta("Descanso");
     }
   }
 
