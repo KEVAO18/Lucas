@@ -8,6 +8,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="Authot" content="Kevin Andres Orrego Martinez">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="assets/multimedia/favicon.png">
 	<title>Lucas Orrego Martínez</title>
