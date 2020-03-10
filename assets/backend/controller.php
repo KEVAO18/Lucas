@@ -213,7 +213,7 @@
 
   function targeta2($periodo='', $materia=''){
     echo "
-    <div class='col-md-6 col-sm-6 mt-5'>
+    <div class='col-md-6 col-sm-12 mt-5'>
       <div class='card'>
         <img src='assets/multimedia/periodo".$periodo."_".$materia.".jpg' class='img-card' alt='img-targeta'>
         <div class='card-body'>
@@ -241,7 +241,7 @@
         $nota = "<h5>Nota: ".$row['nota']."</h5>";
       }
     echo "
-    <div class='col-md-6 col-sm-6 mt-5'>
+    <div class='col-md-6 col-sm-12 mt-5'>
       <div class='card'>
         <img src='assets/multimedia/".$row['tipo'].".jpg' class='img-card' alt='img-targeta'>
         <div class='card-body'>
@@ -250,6 +250,19 @@
           <h5>Estado: ".$row['fecha']."</h5>
           <h5>Estado: ".$estado."</h5>
           ".$nota."
+          <a class='btn btn-indigo' href='update.php?doc=".$row['id']."' title='' style='color: #154521'>Actualizar</a>
+          <a class='btn btn-danger' onclick='confirmar()' title='' style='color: #154521'>Eliminar</a>
+          <script>
+            function confirmar(){
+              var con = confirm('Estas Seguro De Eliminarlo?');
+
+              if (con == true) {
+                window.location.href='assets/backend/conexion.php?op=3&doc=".$row['id']."';
+              } else {
+                alert('Cancelado');
+              }
+            }
+          </script>
         </div>
       </div>
     </div>";
@@ -300,6 +313,77 @@
       targeta("Descanso");
       targeta("Descanso");
       targeta("Descanso");
+    }
+  }
+
+  function update($id=''){
+    $host="localhost";
+    $user="root";
+    $pass="";
+    $db="lucasinem";
+    $conexion = new mysqli($host, $user, $pass, $db) or die('muerto');
+    $query="SELECT * FROM `registros` WHERE id='$id'";
+    $exe = $conexion->query($query);
+     while ($row=$exe->fetch_assoc()){
+      if ($row['estatus']==0) {
+        $estado="No Revisado";
+        $nota = "";
+        $uno="checked";
+        $dos="";
+      }else if ($row['estatus']>=1) {
+        $estado="Revisado";
+        $nota = "<h5>Nota: ".$row['nota']."</h5>";
+        $uno="";
+        $dos="checked";
+      }
+    echo "
+      <div class='container-fluid'>
+        <div class='row my-5 py-5'>
+          <div class='col-md-3'>
+            <div class='card p-2'>
+              <h5>Estado: ".$estado."</h5>
+              ".$nota."
+
+            </div>
+          </div>
+          <div class='col-md-6'>
+            <div class='card mb-4'>
+              <img src='assets/multimedia/".$row['tipo'].".jpg' class='img-card' alt='img-targeta'>
+              <div class='card-title p-2'>
+                <h5>Estado: ".$row['name']."</h5>
+              </div>
+            </div>
+          </div>
+          <div class='col-md-3'>
+            <div class='card p-2'>
+              <h4>Actualizar</h4>
+              <form action='assets/backend/conexion.php?op=2&id=".$id."' method='post'>
+                <div class='md-form mt-3'>
+                  <input type='number' id='notaU' class='form-control' name='notau' value='0'>
+                  <label for='notaU'>Nota</label>
+                </div>
+                <div class=''>
+                  <h5>Revision</h5>
+                  <div class='custom-control custom-radio'>
+                    <input type='radio' class='custom-control-input' value='1' id='yes' name='up' ".$dos.">
+                    <label class='custom-control-label' for='yes'>Si</label>
+                  </div>
+
+                  <div class='custom-control custom-radio'>
+                    <input type='radio' class='custom-control-input' value='0' id='not' name='up' ".$uno.">
+                    <label class='custom-control-label' for='not'>No</label>
+                  </div>
+                </div>
+                <br>
+                <div class='text-center my-3'>
+                  <button type='submit' name='send' class='btn btn-indigo btn-block'>Enviar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    ";
     }
   }
 

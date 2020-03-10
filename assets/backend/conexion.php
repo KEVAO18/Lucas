@@ -27,6 +27,32 @@
 		copy($copy,$destino);
 
 		header("location: ../../".$materia.".php");
+	}else if (isset($_GET['op']) && $_GET['op']==2) {
+		if (isset($_GET['id'])) {
+			$id = $_GET['id'];
+			$rev=$_POST['up'];
+			$nota=$_POST['notau'];
+
+			$query="UPDATE `registros` SET `estatus`='$rev',`nota`='$nota' WHERE `id` = '$id';";
+			$con=$conexion->query($query);
+		
+		header("location: ../../index.php");
+		}
+		
+	}else if (isset($_GET['op']) && $_GET['op']==3) {
+		if (isset($_GET['doc'])) {
+			$id = $_GET['doc'];
+
+			$query="SELECT * FROM `registros` WHERE `id` = '$id'";
+			$get = $conexion->query($query);
+		    while ($row=$get->fetch_assoc()){
+				unlink("../tareas/".$row['name']);
+		    }
+			$query2="DELETE FROM `registros` WHERE `id` = '$id'";
+			$con=$conexion->query($query2);
+		
+		header("location: ../../index.php");
+		}
 	}
 
 ?>

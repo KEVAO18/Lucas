@@ -22,26 +22,16 @@
     <script src='//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js' ></script>
 </head>
 <body>
-    <?php
+  <?php
+   navbar("Update");
+   $id=$_GET['doc'];
+   Update($id);
+  ?>
+  <?php
 
-       navbar("Español");
+      footer();
 
-    ?>
-<div class="container">
-  <div class="row mt-5 py-5">
-    <?php
-    targeta2("1", "Español");
-    targeta2("2", "Español");
-    targeta2("3", "Español");
-    targeta2("4", "Español");
-    ?>
-  </div>
-</div>
-    <?php
-
-        footer();
-
-    ?>
+  ?>
     <script src="assets/js"></script>
     <!-- JQuery -->
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>

@@ -9,6 +9,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="assets/multimedia/favicon.png">
 	<title>Lucas Orrego Martínez</title>
     <!-- Font Awesome -->
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css'>
@@ -19,6 +20,7 @@
     <!-- LESS -->
     <link rel='stylesheet/less' type='text/css' href='assets/css/style.less' />
     <script src='//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js' ></script>
+    <meta name="google-site-verification" content="lSLunSnrPOLUnbPi1zmiazUUc8HnCF7IQVVQvvSecVs" />
 </head>
 <body>
 	<?php
